@@ -7,9 +7,9 @@
         input[type="button"]
         {
             border-radius: 10px;
-            background-color:#ff4456;
+            background-color: cyan;
             color: blue;
-            border-color:#ff4456 ;
+            border-color: hotpink ;
             width:100%;
         }
         input[type="text"]
@@ -17,7 +17,7 @@
             border-radius: 10px;
             text-align: right;
             background-color:white;
-            border-color: black ;
+            border-color: greenyellow ;
             width:100%
         }
         </style>
@@ -26,7 +26,7 @@
 <body>
 <table border="0" style="width: 500px" height="500px">
     <tr>
-        <td colspan="4"><input type="text" id="calculator"></td>
+        <td colspan="4"><input type="text" id="calculator" onclick="enter()"></td>
 <!--        <td></td>-->
 <!--        <td></td>-->
 <!--        <td></td>-->
@@ -55,6 +55,9 @@
         <td><input type="button" name="equal" onclick="result()">=</td>
         <td><input type="button" name="chia" onclick="inputNumber('/')">/</td>
     </tr>
+    <tr>
+        <td><input type="button" name="sqrt" onclick="sqrt('&#8730;')">&#8730;</td>
+    </tr>
 </table>
 <script>
 
@@ -70,6 +73,10 @@
     function clears(){
         console.log('clear')
         document.getElementById('calculator').value = '';
+    }
+    function sqrt(){
+        let sqrt= Math.sqrt(+document.getElementById('calculator').value);
+        document.getElementById('calculator').value=sqrt;
     }
 
 
