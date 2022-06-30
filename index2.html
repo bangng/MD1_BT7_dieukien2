@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+<body>
+<img id="bo" src="hinh-anh-con-bo-de-thuong.jpg" style="position: relative; top: 0px; left: 0px" width="300px" height="300px">
+<button onclick="moveRight()">Move Right</button>
+</body>
+<script>
+    let bo = document.getElementById('con bo');
+    function moveRight() {
+        bo.style.left = parseInt(bo.style.left) +10 + 'px';
+        console.log('left')
+    }
+    function moveCheo(){
+
+    }
+    // su kien ban phim
+    // addEventListener()
+    function movewithkey(evt) {
+        switch (evt.key){
+            case 37:
+                moveleft{}
+                break;
+                case 39
+        }
+
+
+    }
+</script>
+</html>
